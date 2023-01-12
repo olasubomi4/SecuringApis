@@ -8,6 +8,7 @@
   <properties>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
+     <dir>${project.build.directory}</dir>
   </properties>
   <name>Securing Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -64,22 +65,15 @@
   </dependencies>
   <build>
      <finalName>Securing</finalName>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-war-plugin</artifactId>
-      <version>3.3.1</version>
-      <configuration>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-        <archive>
-          <manifest>
-            <addClasspath>true</addClasspath>
-            <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>com.example.Securing</mainClass>
-          </manifest>
-        </archive>
-      </configuration>
-    </plugin>
-  </plugins>
+
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-ear-plugin</artifactId>
+                        <version>${version.ear.plugin}</version>
+                        <configuration>
+                    <outputDirectory>${dir}</outputDirectory>
+                        </configuration>
+                    </plugin>
+                </plugins>
  </build>
 </project>
