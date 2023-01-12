@@ -1,1 +1,1 @@
-web: java -jar target/Securing.war
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.secure
