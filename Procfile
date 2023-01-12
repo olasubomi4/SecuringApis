@@ -1,1 +1,1 @@
-web: java -jar target/Securing/META-INF
+web: java -jar target/Securing.war
