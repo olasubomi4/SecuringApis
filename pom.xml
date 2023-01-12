@@ -75,7 +75,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>com.secure</mainClass>
+            <mainClass>com.example.Securing</mainClass>
           </manifest>
         </archive>
       </configuration>
