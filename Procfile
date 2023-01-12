@@ -1,1 +1,1 @@
-java $JAVA_OPTS -cp target/classes:target/dependency/* Main
+web: sh target/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
